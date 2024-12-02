@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  font-family: "Poppins", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* mi css */
+
+.header-top {
+  background-color: #f6bbd3 ;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 100px;
+  padding: 18px 50px;
+}
+
+.logo img {
+  width: 145px;
+}
+
+.menu nav ul {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 25px;
+align-items: center;
+}
+
+.menu a{
+  color: #009d95;
+  text-decoration: none;
+}
+
+.usuario {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.usuario svg {
+  width: 20px;
+  color: #009d95;
+}
+
+.masterhead {
+  background-image: url('../img/imgmaster.png');
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 17px;
+  gap: 30px;
+}
+
+.masterhead h3 {
+  font-size: 11px;
+  font-weight: lighter;
+}
+.masterhead h1 {
+  font-size: 20px;
+}
+.masterhead button {
+  color: white;
+  background-color: #f6bbd3;
+  border: transparent;
+  font-size: 13px  ;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 15px;
+  transition: color .45s cubic-bezier(.785,.135,.15,.86), border .45s cubic-bezier(.785,.135,.15,.86) ;
+
+}
+.masterhead button:hover {
+  color: #f6bbd3;
+  background-color: transparent ;
+  border: 1px #f6bbd3 solid ; 
+}
+
+.flotante {
+  background-color: #f6bbd3;
+  border-radius: 120px;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+}
+
+
+@media (max-width: 1200px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  
+  .menu nav ul {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .masterhead {
+    height: 400px;
+    background-size: cover;
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .masterhead h1 {
+    font-size: 18px;
+  }
+  
+  .masterhead button {
+    padding: 15px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  
+  .menu nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .usuario {
+    margin-top: 10px;
+  }
+  
+  .masterhead {
+    height: 300px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .masterhead h1 {
+    font-size: 16px;
+  }
+
+  .masterhead button {
+    padding: 12px 8px;
+    font-size: 10px;
+  }
+  
+  .flotante {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top {
+    font-size: 10px;
+    padding: 5px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+
+  .menu nav ul {
+    font-size: 12px;
+  }
+
+  .masterhead {
+    height: 200px;
+    padding: 5px;
+    gap: 10px;
+  }
+
+  .masterhead h1 {
+    font-size: 14px;
+  }
+
+  .masterhead button {
+    padding: 8px 5px;
+    font-size: 8px;
+  }
+  
+  .flotante {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
